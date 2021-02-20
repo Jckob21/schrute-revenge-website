@@ -1,4 +1,54 @@
-.test
+body
 {
-    color: aqua;
+    margin: 0;
+    padding: 0;
+    background-color: #262626;
+}
+
+.container
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#logo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px;
+
+}
+
+.heading
+{
+    margin: 0;
+    padding: 0;
+}
+
+.video-section
+{
+    min-height: 400px;
+    text-align: center;
+}
+
+.welcome-section
+{
+    position: relative;
+    height: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    background: brown;
+}
+
+.interested-section
+{
+    height: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    background: burlywood;
+    border-top: 300px solid brown;
+    border-right: 100vw solid transparent;
 }
