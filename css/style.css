@@ -19,7 +19,19 @@ body
     top: 0;
     left: 0;
     margin: 50px;
+}
 
+.heading-container
+{
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+    left: 0;
+    height: 25vh;
+    width: 40vw;
+    clip-path: polygon(36% 27%, 18% 37%, 0 51%, 0 0, 77% 3%, 100% 0, 60% 15%);
+    background-image: url("heading-background.png"); /* Change path to img folder */
+    color:#9e0505;
 }
 
 .heading

@@ -1,0 +1,51 @@
+body
+{
+    margin: 0;
+
+    color: #FFFFFB;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section
+{
+    padding: 40vh 0;
+}
+
+.clip-section
+{
+    position: relative;
+    background: #14f000;
+
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
+    margin-bottom: -8vw;
+    
+    z-index: 3;
+}
+
+.newsletter-section
+{
+    position: relative;
+    background: #c90216;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
+    margin-bottom: -8vw;
+
+    z-index: 2;
+}
+
+.comments-section
+{
+    position: relative;
+    background: #e37705;
+
+    z-index: 1;
+}
+
+.general-footer
+{
+    padding: 5vh 0;
+    /*background: cross-fade();*/
+    background: darkslategrey;
+}

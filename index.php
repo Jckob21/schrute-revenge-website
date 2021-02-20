@@ -15,12 +15,14 @@
         <div class="container">
             <section class="welcome-section">
                 <header id="logo">
-                    <h1 class="heading">Schrute Revenge</h1>
+                    <div class="heading-container">
+                        <h1 class="heading">Schrute Revenge</h1>
+                    </div>
                 </header>
                 
                 <section class="video-section">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9aYTdzE-ibI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </section>
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/9aYTdzE-ibI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    --></section>
             </section>
 
             <section class="interested-section">
