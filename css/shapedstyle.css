@@ -1,6 +1,7 @@
 body
 {
     margin: 0;
+    padding: 0;
 
     color: #FFFFFB;
     text-align: center;
@@ -10,18 +11,49 @@ body
 
 section
 {
-    padding: 40vh 0;
+    padding: 30vh 0;
 }
+
+.general-header
+{
+    text-align: left;
+    min-height: 20vh;
+
+    position: relative;
+    background-image: url("../../img/header-background.png");
+
+    clip-path: polygon(0 0, 50% 0, 0 100%);
+    margin-bottom: -20vh;
+
+    z-index: 4;
+}
+
+.general-header img
+{
+    padding: 4vh 3vw;
+    width: 15vw;
+    height: auto;
+}
+
+
 
 .clip-section
 {
     position: relative;
     background: #14f000;
+    min-height: 315px;
 
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
     margin-bottom: -8vw;
     
     z-index: 3;
+}
+
+#youtube-frame
+{
+    position: absolute;
+    top: 15%;
+    right: 10%;
 }
 
 .newsletter-section
