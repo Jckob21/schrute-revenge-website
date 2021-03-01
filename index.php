@@ -12,7 +12,9 @@
     $release_date = DateTime::createFromFormat('Y-m-d H:i:s', '2021-4-1 20:00:00');
 
     $time_till_release = $server_date->diff($release_date); //this is a DateInterval object!
-    $time_till_release_formatted = $time_till_release->format('%m months and %d days, %h:%i:%s'); 
+    $time_till_release_formatted = $time_till_release->format('%d days, %h:%i:%s');
+    $days_release = $time_till_release->format('%d days, ');
+    $time_release = $time_till_release->format('%h:%i:%s');
 ?>
 
 <html>
@@ -24,6 +26,8 @@
         <meta name="author" content="Jakub Woźny">
 
         <link rel="stylesheet" href="css\\shapedstyle.css">
+
+        
     </head>
 
     <body>
@@ -40,10 +44,11 @@
                         
                     <div class="timer-container">
                         <h3>Do premiery pozostało:</h3>
-                        <h1>10:13:25</h1>
-                        <?php echo "<p>Server time: " . $server_date_formatted . "</p>";
+                        <!--<h1>10:13:25</h1>-->
+                        <?php /*echo "<p>Server time: " . $server_date_formatted . "</p>";
                         echo "<p>Release time: " . $release_date->format('Y-m-d H:i:s'). "</p>";
-                        echo "<p>Difference time: " . $time_till_release_formatted .  "</p>";
+                        echo "<p>Difference time: " . $time_till_release_formatted .  "</p>";*/
+                        echo '<p class="timespan">' . $days_release . '<span id="timer">' . $time_release . '</span></p>';
                         ?>
                     </div>
                 </div>
@@ -81,5 +86,6 @@
 
          
     </body>
-
+    
+    <script src="scripts/timer.js"></script>
 </html>
