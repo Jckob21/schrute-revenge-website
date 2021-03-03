@@ -2,7 +2,7 @@
 {
     margin: 0;
     padding: 0;
-
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@ section
 .clip-section
 {
     position: relative;
-    background: #14f000;
+    background: #161a1d;
     min-height: 315px;
 
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
@@ -71,11 +71,20 @@ section
 
 .timer-container
 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+
     grid-row: 3/4;
     grid-column: 1/3;
     align-self: end;
 
     text-align: left;
+}
+
+#timer
+{
+    font-size: 3rem;
+    color: #e5383b;
 }
 
 /*          NEWSLETTER SECTION GRID              */
@@ -84,7 +93,7 @@ section
 .newsletter-section
 {
     position: relative;
-    background: #c90216;
+    background: #660708;
 
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
     margin-bottom: -8vw;
@@ -122,7 +131,7 @@ section
 .comments-section
 {
     position: relative;
-    background: #e37705;
+    background: #b1a7a6;
 
     z-index: 1;
 }
@@ -131,5 +140,5 @@ section
 {
     padding: 5vh 0;
     /*background: cross-fade();*/
-    background: darkslategrey;
+    background: #a4161a;
 }

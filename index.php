@@ -73,6 +73,8 @@
         {
             $_SESSION['e_user_email'] = "Your email is not valid! Please provide another one :)";
         }
+
+        unset($_SESSION['user_email']);
     }
 
     /////////////////////////////////// TIMER /////////////////////////////////
@@ -99,7 +101,8 @@
         <meta name="author" content="Jakub Woźny">
 
         <link rel="stylesheet" href="css\\shapedstyle.css">
-
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
         
     </head>
 
