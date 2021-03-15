@@ -132,13 +132,41 @@ section
 {
     position: relative;
     background: #b1a7a6;
+    text-align: left;
 
     z-index: 1;
 }
+
+.comments-section-container
+{
+    width: 70%;
+
+    margin: auto;
+}
+
+.comments-section-container textarea
+{
+    width: 100%;
+    height: 60px;
+    resize: none;
+}
+
+
+/*          FOOTER  SECTION                 */
 
 .general-footer
 {
     padding: 5vh 0;
     /*background: cross-fade();*/
     background: #a4161a;
+}
+
+.error
+{
+    color: crimson;
+}
+
+.success
+{
+    color: lawngreen;
 }

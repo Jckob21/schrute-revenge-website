@@ -77,6 +77,63 @@
         unset($_SESSION['user_email']);
     }
 
+    ///////////////////////////////// COMMENTS ////////////////////////////////
+
+    // add comment form
+    if(isset($_POST['message']))
+    {
+        $username = $_POST['username'];
+        $message = $_POST['message'];
+
+        
+
+        if(strlen($username) < 128)
+        {
+            //connect with db
+            require_once "connect.php";
+
+            try
+            {
+
+                //make connection
+                $connection = new mysqli($host, $db_user, $db_password, $db_name);
+                
+                // get current date
+                $date = date('Y-m-d H:i:s');
+
+                if($connection->connect_errno != 0)
+                {
+                    throw new Exception($connection->mysqli_connect_errno());
+                } else
+                {
+                    $sql = sprintf("INSERT INTO comments (username, date, message) VALUES ('%s', '%s', '%s')",
+                        mysqli_real_escape_string($connection, $username),
+                        mysqli_real_escape_string($connection, $date),
+                        mysqli_real_escape_string($connection, $message));
+
+
+                    if($result = $connection->query($sql))
+                    {
+                        $connection->close();
+                    } else
+                    {
+                        throw new Exception($connection->error);
+                    }
+                }
+
+            } catch(Exception $e)
+            {
+                echo "Data base error, please try again latter.";
+                echo "Developers info: " . $e;
+            }
+
+        }
+        
+        
+    }
+
+
+
     /////////////////////////////////// TIMER /////////////////////////////////
     //get date from server
     $server_date = new DateTime();
@@ -162,7 +219,49 @@
             </section>
 
             <section class="comments-section">
+                <div class='comments-section-container'>
+                    <h1>Komentarze</h1>
+                    <form method='post'>
+                        <input type='text' name='username' value='Anonim'/></br>
+                        <textarea name="message"></textarea></br>
+                        <input type='submit' value='Skomentuj!' />
+                    </form>
 
+<?php
+/*                  PRINT COMMENTS                  */
+    require_once "connect.php";
+    // create connection with database
+    try{
+        $connection = new mysqli($host, $db_user, $db_password, $db_name);
+        if($connection->connect_errno != 0)
+        {
+            throw new Exception(mysqli_connect_errno());
+        }
+
+        $sql = "SELECT * FROM comments";
+
+        if($result = $connection->query($sql))
+        {
+            // print comments
+            while($row = $result->fetch_assoc())
+            {
+                echo "<div class='comment'><p>";
+                    echo $row['username']."</br>";
+                    echo $row['date']."</br>";
+                    echo nl2br($row['message']);
+                echo "</p>";
+            }
+        } else
+        {
+            throw new Exception($connection->error);
+        }
+    } catch(Exception $e)
+    {
+        echo "Data base error, please try again latter.";
+        echo "Developers info: " . $e;
+    }
+?>
+                </div>
             </section>
 
             <footer class="general-footer">
