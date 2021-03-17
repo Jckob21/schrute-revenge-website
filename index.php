@@ -160,7 +160,8 @@
         <link rel="stylesheet" href="css\\shapedstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
@@ -238,18 +239,17 @@
             throw new Exception(mysqli_connect_errno());
         }
 
-        $sql = "SELECT * FROM comments";
+        $sql = "SELECT * FROM comments ORDER BY date DESC";
 
         if($result = $connection->query($sql))
         {
             // print comments
             while($row = $result->fetch_assoc())
             {
-                echo "<div class='comment'><p>";
-                    echo $row['username']."</br>";
-                    echo $row['date']."</br>";
-                    echo nl2br($row['message']);
-                echo "</p>";
+                echo "<div class='comment'>";
+                    echo "<p class='comment-username'><b>" . $row['username'] . "</b> | " . $row['date'] ."</p>";
+                    echo "<p class='comment-message'>" . nl2br($row['message']) . "</p>";
+                echo "</div>";
             }
         } else
         {
