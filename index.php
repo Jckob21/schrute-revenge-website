@@ -244,12 +244,14 @@
         if($result = $connection->query($sql))
         {
             // print comments
+            $counter = 0;
             while($row = $result->fetch_assoc())
             {
-                echo "<div class='comment'>";
+                echo "<div class='comment' id='c" . $counter . "'>";
                     echo "<p class='comment-username'><b>" . $row['username'] . "</b> | " . $row['date'] ."</p>";
                     echo "<p class='comment-message'>" . nl2br($row['message']) . "</p>";
                 echo "</div>";
+                $counter++;
             }
         } else
         {
@@ -274,4 +276,5 @@
     </body>
     
     <script src="scripts/timer.js"></script>
+    <script src="scripts/commentSectionManager.js"></script>
 </html>
