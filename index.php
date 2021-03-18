@@ -253,6 +253,10 @@
                 echo "</div>";
                 $counter++;
             }
+            if($counter >= 5)
+            {
+                echo "<div id='commentButton'>Pokaż mniej</div>";
+            }
         } else
         {
             throw new Exception($connection->error);
