@@ -51,3 +51,28 @@ function show(item)
 {
     item.style.display = 'block';
 }
+
+/*          COMMENTS SHORTABLE          */
+
+defineCommentShortable(commentObjects[0]);
+defineCommentShortable(commentObjects[1]);
+
+function defineCommentShortable(commentObject)
+{
+    // if the comment is long or has a lot of new line chars make it shortable
+    if(commentObject.innerHTML.length > 200 || commentObject.innerHTML.split(/\r\n|\r|\n/).length > 6)
+    {
+        commentObject.innerHTML = commentObject.innerHTML + "<div class='shortable'>pokaż mniej</div>";
+        
+        //test
+        let shortableObject = commentObject.getElementsByClassName("shortable")[0];
+        console.log(shortableObject.innerHTML);
+
+        commentObject.getElementsByClassName("shortable")[0].addEventListener("click", makeCommentShorterLonger);
+    }
+}
+
+function makeCommentShorterLonger()
+{
+    alert("Working!!");
+}

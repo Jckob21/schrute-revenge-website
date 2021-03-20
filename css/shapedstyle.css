@@ -153,6 +153,7 @@ section
 
 .comment
 {
+    position: relative;
     margin: 2vh 0px;
     padding: 1vw;
 
@@ -162,7 +163,22 @@ section
     font-weight: 300;
     
     border-radius: 5%;
+
+    /* overflow: hidden;
+
+    test
+    height: 200px; */
 }
+
+/*TEST.comment::after
+{
+    content: '';
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    height: 30px;
+    background: red;
+}*/
 
 .comment-username
 {
@@ -191,6 +207,23 @@ section
 #commentButton:hover
 {
     background-color: rgb(215, 215, 215);
+}
+
+.shortable
+{
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+
+    text-align: right;
+    color: black;
+
+    cursor: pointer;
+}
+
+.shortable:hover
+{
+    text-decoration: underline;
 }
 
 /*          FOOTER  SECTION                 */
