@@ -247,10 +247,11 @@
             $counter = 0;
             while($row = $result->fetch_assoc())
             {
-                echo "<div class='comment' id='c" . $counter . "'>";
+                echo "<div class='comment-container' id='c" . $counter . "'>";
+                echo "<div class='comment'>";
                     echo "<p class='comment-username'><b>" . $row['username'] . "</b> | " . $row['date'] ."</p>";
                     echo "<p class='comment-message'>" . nl2br($row['message']) . "</p>";
-                echo "</div>";
+                echo "</div></div>";
                 $counter++;
             }
             if($counter >= 5)
