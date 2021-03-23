@@ -249,8 +249,8 @@
             {
                 echo "<div class='comment-container' id='c" . $counter . "'>";
                 echo "<div class='comment'>";
-                    echo "<p class='comment-username'><b>" . $row['username'] . "</b> | " . $row['date'] ."</p>";
-                    echo "<p class='comment-message'>" . nl2br($row['message']) . "</p>";
+                    echo "<p class='comment-username'><b>" . htmlentities($row['username']) . "</b> | " . $row['date'] ."</p>";
+                    echo "<p class='comment-message'>" . nl2br(htmlentities($row['message'])) . "</p>";
                 echo "</div></div>";
                 $counter++;
             }

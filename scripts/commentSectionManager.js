@@ -54,25 +54,39 @@ function show(item)
 
 /*          COMMENTS SHORTABLE          */
 
-defineCommentShortable(commentObjects[0]);
-defineCommentShortable(commentObjects[1]);
+commentObjects.forEach(defineCommentShortable);
+
+
+//defineCommentShortable(commentObjects[0]);
+//defineCommentShortable(commentObjects[1]);
 
 function defineCommentShortable(commentObject)
 {
     // if the comment is long or has a lot of new line chars make it shortable
-    if(commentObject.innerHTML.length > 200 || commentObject.innerHTML.split(/\r\n|\r|\n/).length > 6)
+    if(commentObject.innerHTML.length > 400 || commentObject.innerHTML.split(/\r\n|\r|\n/).length > 6)
     {
         commentObject.innerHTML = commentObject.innerHTML + "<div class='shortable'>pokaż mniej</div>";
-        
-        //test
-        let shortableObject = commentObject.getElementsByClassName("shortable")[0];
-        console.log(shortableObject.innerHTML);
 
-        commentObject.getElementsByClassName("shortable")[0].addEventListener("click", makeCommentShorterLonger);
+        commentObject.getElementsByClassName("shortable")[0].addEventListener("click", function(){makeCommentShorterLonger(commentObject)});
     }
 }
 
-function makeCommentShorterLonger()
+function makeCommentShorterLonger(commentObj)
 {
-    alert("Working!!");
+    /* if comment is partly hidden:
+     * 1) remove 'comment-container-short' class from the element
+     * 2) switch the button content to 'show more'
+     * else
+     * 1) add 'comment-container-short' class to the element
+     * 2) switch the button content to 'show less'
+     */
+    if(commentObj.classList.contains("comment-container-short"))
+    {
+        commentObj.classList.remove("comment-container-short");
+        commentObj.getElementsByClassName("shortable")[0].innerHTML = "pokaż więcej";
+    } else
+    {
+        commentObj.classList.add("comment-container-short");
+        commentObj.getElementsByClassName("shortable")[0].innerHTML = "pokaż mniej";
+    }
 }

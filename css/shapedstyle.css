@@ -253,7 +253,7 @@ section
 .shortable
 {
     position: absolute;
-    bottom: 5%;
+    top: 3%;
     right: 5%;
 
     text-align: right;
