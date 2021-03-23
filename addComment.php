@@ -54,5 +54,4 @@ if(isset($_POST['message']))
     {
         header("Location: index.php");
     }
-
 ?>
