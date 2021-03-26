@@ -29,7 +29,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-
+        <link href="css/fontello.css" rel="stylesheet">
     </head>
 
     <body>
@@ -147,12 +147,26 @@
             </section>
 
             <footer class="general-footer">
-
+                <div class="contact-section">
+                    <h3>Skontaktuj się ze mną:</h2>
+                    <ul>
+                        <li><i class="icon-mail"></i>Jckob21@gmail.com</li>
+                        <li><a href="https://www.linkedin.com/in/jakub-wo%C5%BAny-99a172200/"><i class="icon-linkedin-squared"></i>Linked in</a></li>
+                    </ul>
+                    <h3>Odwiedź moją stronę:</h2>
+                    <a href="http://jakubwozny.pl/"><i class="icon-globe"></i>jakubwozny.pl</a>
+                </div>
+                <div class="donate-section">
+                    <h3>Wesprzyj:</h3>
+                    <a href="https://www.paypal.com/paypalme/kubawozny"><i class="icon-paypal"></i></a>
+                </div>
+                <div class="dwight-photo-section">
+                    <img src="./img/Dwight.png" alt="Your browser does not support displaying images.">
+                    <p>MAY THE FORCE BE WITH YOU</p>
+                </div>
+                <div class="bottom-footer">All right reserved</div>
             </footer>
         </div>
-
-
-         
     </body>
     
     <script src="scripts/timer.js"></script>

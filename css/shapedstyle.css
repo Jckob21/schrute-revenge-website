@@ -172,6 +172,7 @@ section
     position: relative;
     background: #b1a7a6;
     text-align: left;
+    padding-bottom: 20px;
 
     z-index: 5;
 }
@@ -279,9 +280,65 @@ section
 
 .general-footer
 {
-    padding: 5vh 0;
-    /*background: cross-fade();*/
-    background: #a4161a;
+    padding: 2vw 15vw;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 20px;
+
+    background: #161a1d;
+}
+
+.contact-section
+{
+    text-align: left;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+
+.contact-section ul
+{
+    list-style-type: none;
+}
+
+.general-footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.general-footer a:hover
+{
+    color: grey;
+}
+
+.donate-section
+{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.dwight-photo-section
+{
+    text-align: right;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.dwight-photo-section img
+{
+    height: 150px;
+    width: auto;
+}
+
+.bottom-footer
+{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    
+    text-align: center;
 }
 
 .error
