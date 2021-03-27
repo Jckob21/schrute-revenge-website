@@ -44,6 +44,11 @@
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/9aYTdzE-ibI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                         
+                    <div class="clip-description">
+                            <h3>Wciel się w skóre Dwighta z serialu "The Office" i odegraj się na swoich współpracownikach!</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus similique quod incidunt ea omnis ab perferendis asperiores deleniti iure, distinctio maxime quibusdam numquam voluptas possimus dolore adipisci accusantium? Voluptate, atque.</p>
+                    </div>
+
                     <div class="timer-container">
                         <h3>Do premiery pozostało:</h3>
                         <!--<h1>10:13:25</h1>-->
@@ -164,7 +169,7 @@
                     <img src="./img/Dwight.png" alt="Your browser does not support displaying images.">
                     <p>MAY THE FORCE BE WITH YOU</p>
                 </div>
-                <div class="bottom-footer">All right reserved</div>
+                <div class="bottom-footer">©schruterevenge.jakubwozny.pl 2021 - All rights reserved.</div>
             </footer>
         </div>
     </body>

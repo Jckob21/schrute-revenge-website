@@ -37,7 +37,7 @@ section
 .general-header img
 {
     padding: 4vh 3vw;
-    width: 15vw;
+    width: 25vw;
     height: auto;
 }
 
@@ -61,12 +61,26 @@ section
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+
+    text-align: left;
+}
+
+.clip-description
+{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.clip-description h3
+{
+    color: #e5383b; 
 }
 
 .youtube-frame
 {
     grid-row: 1/3;
     grid-column: 2/4;
+    text-align: right;
 }
 
 .timer-container
@@ -77,8 +91,6 @@ section
     grid-row: 3/4;
     grid-column: 1/3;
     align-self: end;
-
-    text-align: left;
 }
 
 #timer
