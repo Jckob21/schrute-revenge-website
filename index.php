@@ -25,7 +25,8 @@
         <meta name="description" content="Schrute Revenge game forum">
         <meta name="author" content="Jakub Woźny">
 
-        <link rel="stylesheet" href="css\\shapedstyle.css">
+        <!--<link rel="stylesheet" href="css\\shapedstyle.css"> OLD CSS-->
+        <link rel="stylesheet" href="css/respstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@
                     </div>
                         
                     <div class="clip-description">
-                            <h3>Wciel się w skóre Dwighta z serialu "The Office" i odegraj się na swoich współpracownikach!</h3>
+                            <h2>Wciel się w skóre Dwighta z serialu "The Office" i odegraj się na swoich współpracownikach!</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus similique quod incidunt ea omnis ab perferendis asperiores deleniti iure, distinctio maxime quibusdam numquam voluptas possimus dolore adipisci accusantium? Voluptate, atque.</p>
                     </div>
 
@@ -75,9 +76,9 @@
                         <form method="POST" action="newsletterSignUp.php">
                             <label>
                                 <p>Zapisz się na newsletter żeby nie przegapić premiery!</p>
-                                <input type="text" name="user_email">
+                                <input type="text" name="user_email" class="email-input">
                             </label>
-                            <input type="submit" value="Wyślij!">
+                            <input type="submit" value="Wyślij!" class="email-submit-input">
                         </form>
                         <?php
                         if(isset($_SESSION['e_user_email']))

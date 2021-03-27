@@ -83,10 +83,10 @@ function makeCommentShorterLonger(commentObj)
     if(commentObj.classList.contains("comment-container-short"))
     {
         commentObj.classList.remove("comment-container-short");
-        commentObj.getElementsByClassName("shortable")[0].innerHTML = "pokaż więcej";
+        commentObj.getElementsByClassName("shortable")[0].innerHTML = "pokaż mniej";
     } else
     {
         commentObj.classList.add("comment-container-short");
-        commentObj.getElementsByClassName("shortable")[0].innerHTML = "pokaż mniej";
+        commentObj.getElementsByClassName("shortable")[0].innerHTML = "pokaż więcej";
     }
 }
