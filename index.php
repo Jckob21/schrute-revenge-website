@@ -25,8 +25,8 @@
         <meta name="description" content="Schrute Revenge game forum">
         <meta name="author" content="Jakub Woźny">
 
-        <!--<link rel="stylesheet" href="css\\shapedstyle.css"> OLD CSS-->
-        <link rel="stylesheet" href="css/respstyle.css">
+        <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css\\shapedstyle.css">
+        <link rel="stylesheet" media="screen and (max-width: 1199px)" href="css/respstyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@
                 
             </section>
 
-            <section class="photo1-section" data-parallax="scroll" data-image-src="img/screenshot2.png" data-z-index="8">
+            <section class="photo1-section">
             </section>
         
             <section class="newsletter-section">
@@ -96,7 +96,7 @@
                 </div>
             </section>
 
-            <section class="photo2-section" data-parallax="scroll" data-image-src="img/screenshot1.png" data-z-index="6">
+            <section class="photo2-section">
                 
             </section>
 

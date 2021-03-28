@@ -12,7 +12,7 @@ body
     font-weight: bold;
 
     font-family: 'Oswald', sans-serif;
-    background-color: #161a1d;
+    
 }
 
 section
@@ -100,6 +100,11 @@ section
 }
 
 /*          COMMENT SECTION         */
+.comments-section
+{
+    background: #b1a7a6;
+}
+
 .comments-section-container
 {
     text-align: left;
@@ -130,6 +135,7 @@ section
 
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    font-size: 0.8rem;
     
     border-radius: 5%;
 }
@@ -149,6 +155,7 @@ section
     bottom: 0%;
 
     height: 10vh;
+    border-radius: 10%;
 
     background-image: linear-gradient(to top, rgba(211, 201, 200, 0.3), rgba(211, 201, 200, 0));
 }
@@ -159,8 +166,85 @@ section
     overflow: hidden;
 }
 
+.comment-username
+{
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#commentButton
+{
+    background-color: rgb(199, 199, 199);
+    
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    
+    margin: 0 auto;
+    width: 40vw;
+    border: 1px solid black;
+
+    cursor: pointer;
+}
+
+.shortable
+{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+
+    text-align: right;
+    color: grey;
+    font-size: 2rem;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+/*          FOOTER          */
+
+.general-footer
+{
+    padding: 2vh 0;
+    background: #161a1d;
+}
+
+.contact-section ul
+{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+
+.general-footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.general-footer a:hover
+{
+    color: grey;
+}
+
+.donate-section
+{
+    margin: 10px 0px;
+}
 
 .dwight-photo-section
 {
     display: none;
+}
+
+.error
+{
+    color: crimson;
+}
+
+.success
+{
+    color: lawngreen;
 }
