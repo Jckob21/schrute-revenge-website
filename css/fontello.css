@@ -60,7 +60,7 @@
 .icon-paypal:before { content: '\f1ed'; font-size: 64px; padding: 5vh 0;} /* '' */
 .icon-linkedin-squared:before { content: '\f30c'; } /* '' */
 
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 1199px) {
  
   [class^="icon-"]:before, [class*=" icon-"]:before {
     margin-right: 2.5em;
